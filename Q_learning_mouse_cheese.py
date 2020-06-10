@@ -5,17 +5,16 @@ import copy
 
 EPISODE = 500
 LEARNING_RATE = 0.01
-GAMMA = 0.9
+GAMMA = 0.95
 
 # environment with rewards
 env_matrix = np.array([[0, 0, 0, 0, 0],
-                       [-10, -10, -10, 0, -10],
+                       [-10, -10, 0, 0, -10],
                        [0, 0, 0, 0, 0],
                        [0, 0, -10, 25, 0],
                        [-10, 0, -10, 0, 0]
                        ])
 
-class FindTheCheese:
 def update_state(state, direction):
     # ENV action/step
     if direction == 0:
